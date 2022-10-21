@@ -1,7 +1,8 @@
-package io.hydok.cleanarchitecture
+package io.hydok.cleanarchitecture.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import io.hydok.cleanarchitecture.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

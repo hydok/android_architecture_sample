@@ -1,12 +1,12 @@
 plugins {
-    id("com.android.library") // 모듈의경우 library
+    id("com.android.library")
     id 'kotlin-android'
     id 'kotlin-kapt'
 }
 
-
 android {
     compileSdk compileSdk_Version
+    //buildToolsVersion buildTools_Version
 
     defaultConfig{
 
@@ -14,7 +14,6 @@ android {
 }
 
 dependencies {
-    implementation project(':domain')
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.5.1'
