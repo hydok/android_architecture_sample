@@ -1,4 +1,6 @@
 package io.hydok.domain.usecase
 
-class GetSampleDataUseCase {
+import io.hydok.domain.repository.Repository
+
+class GetSampleDataUseCase(val repository: Repository) {
 }

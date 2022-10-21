@@ -1,4 +1,6 @@
 package io.hydok.data.datasource
 
-class RemoteDataSourceImpl: RemoteDataSource {
+import io.hydok.data.api.ApiService
+
+class RemoteDataSourceImpl(val apiService: ApiService): RemoteDataSource {
 }
