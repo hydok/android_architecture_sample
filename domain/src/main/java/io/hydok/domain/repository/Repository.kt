@@ -1,4 +1,4 @@
-package com.finpong.domain.repository
+package io.hydok.domain.repository
 
 interface Repository {
 
