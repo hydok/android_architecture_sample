@@ -2,6 +2,7 @@ package io.hydok.cleanarchitecture.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import dagger.hilt.android.AndroidEntryPoint
 import io.hydok.cleanarchitecture.R
 import io.hydok.domain.usecase.GetSampleDataUseCase
@@ -15,7 +16,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        useCase.invoke("sample")
+        val data = useCase.invoke("sample")
+        Log.d("MainActivity", data.toString())
 
     }
 }

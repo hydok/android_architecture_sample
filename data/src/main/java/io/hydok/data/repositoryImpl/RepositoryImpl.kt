@@ -6,8 +6,8 @@ import io.hydok.domain.repository.Repository
 import javax.inject.Inject
 
 class RepositoryImpl @Inject constructor(
-    val remoteDataSource: RemoteDataSource,
-    val localDataSource: LocalDataSource
+    private val remoteDataSource: RemoteDataSource,
+    private val localDataSource: LocalDataSource
 ) : Repository {
-    override fun getSampleData() = remoteDataSource.getSampleRemoteData()
+    override fun getSampleData() = localDataSource.getSampleLocalData()
 }
