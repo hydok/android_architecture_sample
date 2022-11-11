@@ -13,24 +13,35 @@ import java.net.UnknownHostException
 
 abstract class BaseViewModel : ViewModel() {
     private val _fetchState = MutableLiveData<FetchState>()
-    val fetchState : LiveData<FetchState>
+    val fetchState: LiveData<FetchState>
         get() = _fetchState
 
-
+    private val _isLoading = MutableLiveData<Boolean>()
+    val isLoading: LiveData<Boolean>
+        get() = _isLoading
 
     open fun launchViewModelScope(doWork: suspend () -> Unit) =
         viewModelScope.launch(viewModelScope.coroutineContext + Dispatchers.IO + exceptionHandler) {
             doWork()
         }
 
-    private val exceptionHandler = CoroutineExceptionHandler{ _, throwable ->
+    private val exceptionHandler = CoroutineExceptionHandler { _, throwable ->
         throwable.printStackTrace()
 
-        when(throwable){
+        when (throwable) {
             is SocketException -> _fetchState.postValue(FetchState.INTERNET_ERROR)
             //is HttpException -> _fetchState.postValue(FetchState.PARSE_ERROR)
             is UnknownHostException -> _fetchState.postValue(FetchState.WRONG_CONNECTION)
             else -> _fetchState.postValue(FetchState.FAIL)
         }
+    }
+
+
+
+    fun showProgress() {
+        _isLoading.value = true
+    }
+    fun hideProgress() {
+        _isLoading.value = false
     }
 }
