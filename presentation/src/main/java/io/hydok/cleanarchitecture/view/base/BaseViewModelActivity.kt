@@ -1,6 +1,7 @@
 package io.hydok.cleanarchitecture.view.base
 
 import android.os.Bundle
+import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
@@ -11,7 +12,7 @@ import androidx.databinding.ViewDataBinding
 * @version 1.0.0
 * @since 2022/10/21 3:26 오후
 **/
-abstract class BaseViewModelActivity<VB : ViewDataBinding, VM : BaseViewModel>(private val layoutRes: Int) : AppCompatActivity() {
+abstract class BaseViewModelActivity<VB : ViewDataBinding, VM : BaseViewModel>(@LayoutRes private val layoutRes: Int) : AppCompatActivity() {
 
     lateinit var binding : VB
     abstract val viewModel: VM
