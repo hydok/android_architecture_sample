@@ -2,6 +2,7 @@ plugins {
     id("com.android.library") // 모듈의경우 library
     id 'kotlin-android'
     id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
 }
 
 
@@ -15,6 +16,10 @@ android {
 
 dependencies {
     implementation project(':domain')
+
+    // hilt
+    implementation "com.google.dagger:hilt-android:$hiltVersion"
+    kapt "com.google.dagger:hilt-android-compiler:$hiltVersion"
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.5.1'
