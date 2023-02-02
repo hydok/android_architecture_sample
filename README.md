@@ -39,7 +39,8 @@ Entity : 변경이 되서는 안되는 Data Class. 가장 기본이 되는 Data 
 즉, 변경가능성이 높은 API 같은 경우에는 Entity 가 아니라 DTO 라고 생각해야 한다.
 DB 입장에서는 해당 값들이 변경되면 안되는 값들이기 때문에 Entity 로 어노테이션을 선언하여 사용한다.
 
-DTO : 변경이 쉽게 가능한 Data Class. 데이터 형태나 구조가 바뀔 수 있는 경우 사용하는 Data Class.      DTO 를 가공하여 Entity 에 넣어 사용하기 때문에, 실제로 사용하는 데이터가 변경되지 않는 이상 다른 구조에 영향이 없다.
+DTO : 변경이 쉽게 가능한 Data Class. 데이터 형태나 구조가 바뀔 수 있는 경우 사용하는 Data Class.      
+DTO 를 가공하여 Entity 에 넣어 사용하기 때문에, 실제로 사용하는 데이터가 변경되지 않는 이상 다른 구조에 영향이 없다.
 
 Mapper : Data Entity to Data Model
 Data Layer 에서는 Data Entity 로 받아서 사용하지만, Domain, Presentation Layer 에서는 
