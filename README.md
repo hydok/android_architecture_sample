@@ -1,4 +1,4 @@
-# android_cleanarchitecture_sample
+# android_cleanarchitecture
 안드로이드 클린 아키텍처 프레임
 
 모듈 구조 및 디렉토리 구조를 설정
