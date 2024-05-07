@@ -1,14 +1,14 @@
 
 
 ext{
-    compileSdk_Version = 32
-    targetSdk_Version = 32
+    compileSdk_Version = 33
+    targetSdk_Version = 33
 
-    minSdk_Version = 21
+    minSdk_Version = 24
     versionCode = 1
     versionName = "1.0.0"
 
-    kotlinVersion = "1.7.20"
+    kotlinVersion = "1.9.0"
     roomVersion = "2.4.3"
     koinVersion = "2.2.2"
     gsonVersion = "2.9.0"
@@ -18,5 +18,5 @@ ext{
     coroutineVersion = "2.3.0-rc01"
     glibeVersion = "4.11.0"
     okhttpVersion = "4.9.1"
-    hiltVersion = "2.42"
+    hiltVersion = "2.50"
 }
