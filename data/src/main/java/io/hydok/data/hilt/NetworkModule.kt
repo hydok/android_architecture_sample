@@ -1,4 +1,4 @@
-package io.hydok.cleanarchitecture.hilt
+package io.hydok.data.hilt
 
 import dagger.Module
 import dagger.Provides

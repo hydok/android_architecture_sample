@@ -1,8 +1,9 @@
 package io.hydok.data.datasource
 
 import io.hydok.domain.model.SampleModel
+import javax.inject.Inject
 
-class LocalDataSourceImpl : LocalDataSource {
+class LocalDataSourceImpl @Inject constructor() : LocalDataSource {
     override fun getSampleLocalData(): List<SampleModel> {
         // TODO: get Data from Room
         return listOf(

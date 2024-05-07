@@ -1,5 +1,6 @@
-package io.hydok.cleanarchitecture.hilt
+package io.hydok.data.hilt
 
+import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -13,19 +14,14 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-object DataSourceModule {
+abstract class DataSourceModule {
 
 
-    @Singleton
-    @Provides
-    fun provideRemoteDataSource(apiService: ApiService): RemoteDataSource =
-        RemoteDataSourceImpl(apiService)
+    @Binds
+    abstract fun bindRemoteDataSource(impl: RemoteDataSourceImpl): RemoteDataSource
 
-    @Singleton
-    @Provides
-    fun provideLocalDataSource(): LocalDataSource =
-        LocalDataSourceImpl()
-
+    @Binds
+    abstract fun bindLocalDataSource(impl: LocalDataSourceImpl): LocalDataSource
 
 
 }
