@@ -9,7 +9,6 @@ import io.hydok.domain.model.SampleModel
  */
 fun mapperToUserData(entitys: List<SampleEntity>): List<SampleModel> {
     //아하하하
-    //아아하하
     return entitys.map {
         SampleModel(
             it.id.toInt(),
